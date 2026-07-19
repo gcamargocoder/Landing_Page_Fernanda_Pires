@@ -131,12 +131,14 @@ h1,h2,h3,h4{
 }
 
 .logo{
-  font-family:var(--font-heading);
-  font-size:1.4rem;
-  font-weight:600;
-  color:var(--petrol);
+  display:flex;
+  align-items:center;
 }
-.logo span{ color:var(--gold); }
+.logo__img{
+  height:48px;
+  width:auto;
+  display:block;
+}
 
 .nav__list{
   display:flex;
@@ -969,3 +971,21 @@ h1,h2,h3,h4{
 }
 .whatsapp-float:hover{ transform:scale(1.08); }
 .whatsapp-float svg{ width:26px; height:26px; }
+
+/* ---------- Acessibilidade: link "pular para o conteúdo" ---------- */
+.skip-link{
+  position:absolute;
+  top:-60px;
+  left:16px;
+  z-index:1000;
+  background:var(--petrol);
+  color:var(--off-white);
+  padding:12px 20px;
+  border-radius:var(--radius-sm);
+  font-size:.9rem;
+  font-weight:500;
+  transition:top .2s ease;
+}
+.skip-link:focus{
+  top:16px;
+}

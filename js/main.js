@@ -41,14 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Reveal on scroll
+  // Reveal on scroll — repete toda vez que o elemento entra ou sai da tela
   const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting){
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
+      entry.target.classList.toggle('in-view', entry.isIntersecting);
     });
   }, { threshold: 0.2 });
 
