@@ -20,7 +20,7 @@
 ---
 
 ## 🌐 Live Site
-👉 [**fernandapirescamargo.com.br**](https://gcamargocoder.github.io/Landing_Page_Fernanda_Pires/)
+👉 [**Pagina da Fernanda Terapeuta**](https://gcamargocoder.github.io/Landing_Page_Fernanda_Pires/)
 
 ---
 
