@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="assets/img/logo-petrol.png" alt="Logo Acalme seu Coração" width="140px">
+  <img src="assets/img/logo-white.png" alt="Logo Acalme seu Coração" width="140px">
 </p>
 
 <h2 align="center">Landing Page · Fernanda Pires Camargo</h2>
@@ -115,6 +115,7 @@ fernanda-pires-premium/
 <a name="author"></a>
 ## 👨‍💻 Author
 
-Developed by **Gilson** — electrician/HVAC technician and self-taught developer, built as a gift and portfolio piece for [Fernanda Pires Camargo](https://gcamargocoder.github.io/Landing_Page_Fernanda_Pires/).
+Developed by **Gilson** 
+(https://www.linkedin.com/in/gilcamargo/).
 
 🚀 Towards new skills!
