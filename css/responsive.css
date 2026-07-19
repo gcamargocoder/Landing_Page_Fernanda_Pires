@@ -1,0 +1,178 @@
+/* =========================================================
+   responsive.css — Breakpoints
+   ========================================================= */
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px){
+  .hero__inner{
+    grid-template-columns:1fr;
+    gap:56px;
+    text-align:center;
+  }
+  .hero__text{ margin-inline:auto; }
+  .hero__actions{ justify-content:center; }
+  .hero__badges{ justify-content:center; }
+  .hero__media{ max-width:420px; margin-inline:auto; margin-bottom:40px; }
+  .hero__card{ left:50%; transform:translateX(-50%); bottom:-24px; }
+}
+
+/* ---------- Mobile nav ---------- */
+@media (max-width: 860px){
+  .nav{
+    position:fixed;
+    top:0; right:0;
+    width:min(320px, 80vw);
+    height:100vh;
+    background:var(--off-white);
+    box-shadow:-10px 0 40px rgba(31,59,59,0.12);
+    transform:translateX(100%);
+    transition:var(--transition);
+    z-index:99;
+    padding:100px 32px 32px;
+  }
+  .nav.is-open{ transform:translateX(0); }
+
+  .nav__list{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:26px;
+  }
+
+  .nav-toggle{ display:flex; }
+}
+
+/* ---------- Small mobile ---------- */
+@media (max-width: 560px){
+  .hero{ padding-top:120px; }
+  .hero__title{ font-size:2rem; }
+  .btn{ padding:14px 24px; font-size:.9rem; }
+  .hero__card{ padding:14px 18px; gap:10px; }
+  .shape--sage{ width:280px; height:280px; }
+  .shape--petrol{ width:240px; height:240px; }
+}
+
+/* ---------- Minha Missão responsivo ---------- */
+@media (max-width: 992px){
+  .missao__inner{
+    grid-template-columns:1fr;
+    gap:56px;
+    text-align:center;
+  }
+  .missao__media{ max-width:420px; margin-inline:auto; }
+  .missao__badge{ right:50%; transform:translateX(50%); bottom:-24px; }
+  .section__text{ margin-inline:auto; }
+}
+
+@media (max-width: 560px){
+  .section{ padding-block:80px; }
+  .missao__badge{ padding:12px 16px; gap:10px; }
+}
+
+/* ---------- O que é TFT responsivo ---------- */
+@media (max-width: 992px){
+  .tft__grid{ grid-template-columns:repeat(2, 1fr); }
+}
+
+@media (max-width: 560px){
+  .tft__grid{ grid-template-columns:1fr; }
+  .tft__card{ padding:32px 24px; }
+}
+
+/* ---------- Como Funciona responsivo ---------- */
+@media (max-width: 860px){
+  .timeline{
+    grid-template-columns:1fr;
+    gap:36px;
+    padding-left:28px;
+  }
+  .timeline__line{
+    top:0;
+    bottom:0;
+    left:21px;
+    right:auto;
+    width:2px;
+    height:auto;
+    background:linear-gradient(180deg, var(--sage), var(--gold), var(--petrol));
+  }
+  .timeline__step{
+    text-align:left;
+    padding-inline:0;
+    padding-left:36px;
+  }
+  .timeline__number{
+    position:absolute;
+    left:-28px;
+    top:0;
+    margin:0;
+  }
+  .timeline__text{ margin-inline:0; max-width:100%; }
+}
+
+/* ---------- Benefícios responsivo ---------- */
+@media (max-width: 992px){
+  .beneficios__inner{ grid-template-columns:1fr; gap:44px; }
+  .beneficios__intro{ position:static; }
+  .beneficios__intro .section__text{ max-width:100%; }
+}
+
+@media (max-width: 640px){
+  .beneficios__grid{ grid-template-columns:1fr; }
+}
+
+/* ---------- Sessões responsivo ---------- */
+@media (max-width: 860px){
+  .sessoes__grid{ grid-template-columns:1fr; }
+}
+
+@media (max-width: 560px){
+  .sessoes__card{ padding:36px 26px; }
+}
+
+/* ---------- Depoimentos responsivo ---------- */
+@media (max-width: 560px){
+  .depoimentos__slide{ padding:40px 26px; }
+  .depoimentos__text{ font-size:1.05rem; }
+  .depoimentos__controls{ gap:16px; }
+}
+
+/* ---------- FAQ responsivo ---------- */
+@media (max-width: 560px){
+  .faq__question{ padding:18px 20px; font-size:.95rem; }
+  .faq__answer{ padding-inline:20px; }
+}
+
+/* ---------- CTA Final responsivo ---------- */
+@media (max-width: 992px){
+  .cta-final__inner{
+    grid-template-columns:1fr;
+    gap:48px;
+    text-align:center;
+  }
+  .cta-final__text{ margin-inline:auto; }
+  .cta-final__actions{ justify-content:center; }
+  .cta-final__media{ max-width:360px; margin-inline:auto; }
+}
+
+@media (max-width: 560px){
+  .cta-final{ padding-block:90px; }
+}
+
+/* ---------- Footer responsivo ---------- */
+@media (max-width: 860px){
+  .footer__inner{
+    grid-template-columns:1fr;
+    gap:36px;
+    text-align:center;
+  }
+  .footer__tagline{ margin-inline:auto; }
+  .footer__social{ justify-content:center; }
+  .footer__contact a{ justify-content:center; }
+}
+
+/* ---------- WhatsApp flutuante responsivo ---------- */
+@media (max-width: 560px){
+  .whatsapp-float{
+    width:52px; height:52px;
+    bottom:20px; right:20px;
+  }
+}
