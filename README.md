@@ -70,7 +70,7 @@ Beyond serving Fernanda's practice, this project was also built as a **reusable 
 ---
 
 <a name="layout"></a>
-## 📱💻 Layout
+## 📱💻 Layout 100% responsivo
 
 <!-- Substitua os caminhos abaixo por prints reais do site publicado -->
 <p align="center">
