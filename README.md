@@ -74,11 +74,11 @@ Beyond serving Fernanda's practice, this project was also built as a **reusable 
 
 <!-- Substitua os caminhos abaixo por prints reais do site publicado -->
 <p align="center">
-  <img src="assets/img/Desktop.webp" alt="Desktop Version" width="600px">
+  <img src="assets/img/Desktop.png" alt="Desktop Version" width="600px">
 </p>
 <p align="center">
-  <img src="assets/img/Tablet.webp" alt="Tablet Version" width="360px">
-  <img src="assets/img/Celular.webp" alt="Mobile Version" width="220px">
+  <img src="assets/img/Tablet.png" alt="Tablet Version" width="360px">
+  <img src="assets/img/Mobile.png" alt="Mobile Version" width="220px">
 </p>
 
 ---
