@@ -11,35 +11,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Palavra giratória no título do Hero
+  const rotatorEl = document.getElementById('heroRotator');
+  if (rotatorEl){
+    const words = ['ansiedade', 'pânico', 'medos', 'traumas', 'dores'];
+    let wordIndex = 0;
+
+    setInterval(() => {
+      rotatorEl.classList.add('is-fading');
+
+      setTimeout(() => {
+        wordIndex = (wordIndex + 1) % words.length;
+        rotatorEl.textContent = words[wordIndex];
+        rotatorEl.classList.remove('is-fading');
+      }, 300);
+    }, 2600);
+  }
+
   // Header muda de estilo ao rolar
   const header = document.getElementById('header');
-  const onScroll = () => {
-    header.classList.toggle('is-scrolled', window.scrollY > 40);
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll);
+  if (header){
+    const onScroll = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 40);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+  }
 
   // Menu mobile
   const nav = document.getElementById('nav');
   const navToggle = document.getElementById('navToggle');
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('is-open');
-    navToggle.setAttribute('aria-expanded', isOpen);
-    navToggle.innerHTML = isOpen
-      ? '<i data-lucide="x"></i>'
-      : '<i data-lucide="menu"></i>';
-    if (window.lucide) lucide.createIcons();
-  });
-
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', false);
-      navToggle.innerHTML = '<i data-lucide="menu"></i>';
+  if (nav && navToggle){
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+      navToggle.innerHTML = isOpen
+        ? '<i data-lucide="x"></i>'
+        : '<i data-lucide="menu"></i>';
       if (window.lucide) lucide.createIcons();
     });
-  });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', false);
+        navToggle.innerHTML = '<i data-lucide="menu"></i>';
+        if (window.lucide) lucide.createIcons();
+      });
+    });
+  }
 
   // Reveal on scroll — repete toda vez que o elemento entra ou sai da tela
   const revealEls = document.querySelectorAll('.reveal');

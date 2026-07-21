@@ -1,0 +1,211 @@
+/* =========================================================
+   sobre-tft.css — Estilos exclusivos da página auxiliar
+   sobre-a-tft.html
+   ========================================================= */
+
+/* ---------- Hero interno ---------- */
+.sobre-hero{
+  padding-top:160px;
+  padding-bottom:80px;
+  text-align:center;
+  background:var(--off-white);
+}
+.sobre-hero__inner{
+  max-width:720px;
+  margin-inline:auto;
+}
+.sobre-hero__title{
+  font-size:clamp(2rem, 3.4vw, 3rem);
+  margin-bottom:20px;
+}
+.sobre-hero__text{
+  color:var(--muted);
+  font-size:1.05rem;
+  max-width:560px;
+  margin-inline:auto;
+}
+
+/* ---------- História / Como Atua ---------- */
+.historia{ padding-block:100px; }
+.historia__grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:64px;
+}
+.historia__col{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+.historia__col .section__title{
+  text-align:left;
+  margin-bottom:20px;
+}
+.historia__col .section__text{
+  text-align:left;
+  max-width:100%;
+  margin-inline:0;
+  margin-bottom:16px;
+}
+
+/* ---------- Amplitude dos Resultados ---------- */
+.amplitude__grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+  margin-bottom:40px;
+}
+.amplitude__card{
+  background:var(--white);
+  border-radius:var(--radius-md);
+  padding:30px 24px;
+  box-shadow:var(--shadow-card);
+  transition:var(--transition);
+}
+.amplitude__card:hover{ transform:translateY(-6px); }
+.amplitude__icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:48px; height:48px;
+  border-radius:50%;
+  background:var(--off-white-2);
+  color:var(--petrol);
+  margin-bottom:18px;
+}
+.amplitude__icon svg{ width:21px; height:21px; }
+.amplitude__title{
+  font-size:1rem;
+  margin-bottom:10px;
+}
+.amplitude__text{
+  font-size:.86rem;
+  color:var(--muted);
+  line-height:1.55;
+}
+
+/* ---------- A Transformação é Real ---------- */
+.transformacao-real{ padding-block:100px; overflow-x:hidden; }
+.transformacao-real__inner{
+  max-width:720px;
+  margin-inline:auto;
+  text-align:center;
+}
+.transformacao-real__text{
+  color:rgba(250,248,245,0.78);
+  font-size:1.02rem;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+/* ---------- CTA da página auxiliar ---------- */
+.cta-sobre{ padding-block:100px; }
+.cta-sobre__inner{
+  max-width:600px;
+  margin-inline:auto;
+  text-align:center;
+}
+.cta-sobre__inner .section__title{ margin-bottom:16px; }
+.cta-sobre__actions{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:32px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 992px){
+  .historia__grid{ grid-template-columns:1fr; gap:48px; }
+  .amplitude__grid{ grid-template-columns:repeat(2, 1fr); }
+}
+
+@media (max-width: 560px){
+  .sobre-hero{ padding-top:130px; padding-bottom:60px; }
+  .historia{ padding-block:70px; }
+  .transformacao-real{ padding-block:70px; }
+  .cta-sobre{ padding-block:70px; }
+  .amplitude__grid{ grid-template-columns:1fr; }
+}
+
+/* ---------- Fotos ilustrativas (História / Como Atua) ---------- */
+.historia__photo-wrap{
+  width:100%;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-card);
+  aspect-ratio:16/10;
+  margin-top:auto;
+}
+.historia__photo-wrap img{
+  width:100%; height:100%;
+  object-fit:cover;
+}
+
+/* ---------- TFT em Números ---------- */
+.numeros-tft{ padding-block:90px; }
+.resultados__stats{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  text-align:center;
+}
+.resultados__stat strong{
+  display:block;
+  font-family:var(--font-heading);
+  font-size:2rem;
+  color:var(--petrol);
+  margin-bottom:6px;
+}
+.resultados__stat span{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* ---------- Transformação Real (agora com foto) ---------- */
+.transformacao-real__grid{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:64px;
+  align-items:center;
+}
+.transformacao-real__col,
+.transformacao-real__media{ min-width:0; }
+.transformacao-real__col .section__title,
+.transformacao-real__col .eyebrow{ text-align:left; }
+.transformacao-real__text{ text-align:left; }
+
+.transformacao-real__photo-wrap{
+  width:100%;
+  max-width:100%;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-dark);
+  aspect-ratio:4/3;
+  border:1px solid rgba(250,248,245,0.1);
+}
+.transformacao-real__photo-wrap img{
+  width:100%; height:100%;
+  object-fit:contain;
+  background:var(--off-white);
+}
+
+/* ---------- Mini-FAQ (Outras dúvidas) ---------- */
+.duvidas-tft{ background:var(--off-white-2); }
+
+/* ---------- Responsivo (adições) ---------- */
+@media (max-width: 640px){
+  .resultados__stats{ grid-template-columns:1fr; gap:32px; }
+}
+
+@media (max-width: 992px){
+  .transformacao-real__grid{
+    grid-template-columns:1fr;
+    gap:44px;
+    text-align:center;
+  }
+  .transformacao-real__col .section__title,
+  .transformacao-real__col .eyebrow,
+  .transformacao-real__text{ text-align:center; }
+  .transformacao-real__media{ max-width:340px; margin-inline:auto; }
+}

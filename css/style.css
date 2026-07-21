@@ -241,6 +241,16 @@ h1,h2,h3,h4{
 }
 .hero__title .highlight{ color:var(--sage-dark); }
 
+.hero__rotator{
+  display:inline-block;
+  color:var(--gold);
+  transition:opacity .3s ease, transform .3s ease;
+}
+.hero__rotator.is-fading{
+  opacity:0;
+  transform:translateY(8px);
+}
+
 .hero__text{
   font-size:1.05rem;
   color:var(--muted);
@@ -990,4 +1000,97 @@ h1,h2,h3,h4{
 }
 .skip-link:focus{
   top:16px;
+}
+
+/* ---------- O que a TFT Trata ---------- */
+.trata__grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:56px;
+  margin-bottom:36px;
+}
+
+.trata__col-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:1.15rem;
+  margin-bottom:24px;
+  color:var(--petrol);
+}
+.trata__col-title svg{
+  width:22px; height:22px;
+  color:var(--gold);
+}
+
+.trata__list{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.trata__list li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:.95rem;
+  color:var(--ink);
+  padding-bottom:14px;
+  border-bottom:1px solid rgba(31,59,59,0.08);
+}
+.trata__list svg{
+  width:18px; height:18px;
+  color:var(--sage-dark);
+  flex-shrink:0;
+}
+
+.trata__disclaimer{
+  text-align:center;
+  font-size:.78rem;
+  color:var(--muted);
+  max-width:600px;
+  margin-inline:auto;
+  line-height:1.6;
+}
+
+/* ---------- Botão "Quer saber mais?" (reutilizável, distinto do CTA de agendar) ---------- */
+.saiba-mais{
+  text-align:center;
+  margin-top:44px;
+}
+.saiba-mais--left{ text-align:left; }
+
+/* Quando usado dentro do grid assimétrico de Benefícios, ocupar a largura toda */
+.beneficios__inner > .saiba-mais{
+  grid-column:1 / -1;
+}
+.btn--mais{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:13px 26px;
+  border-radius:999px;
+  border:1.5px dashed var(--gold);
+  background:rgba(201,167,104,0.08);
+  color:var(--petrol);
+  font-size:.85rem;
+  font-weight:600;
+  transition:var(--transition);
+}
+.btn--mais:hover{
+  background:var(--gold);
+  border-style:solid;
+  color:var(--off-white);
+  transform:translateY(-2px);
+}
+.btn--mais svg{ width:15px; height:15px; }
+
+/* Variante para uso sobre fundo escuro (petróleo) */
+.btn--mais-light{
+  border-color:var(--gold-soft);
+  background:rgba(250,248,245,0.06);
+  color:var(--off-white);
+}
+.btn--mais-light:hover{
+  background:var(--gold);
+  color:var(--petrol);
 }

@@ -176,3 +176,8 @@
     bottom:20px; right:20px;
   }
 }
+
+/* ---------- O que a TFT Trata responsivo ---------- */
+@media (max-width: 860px){
+  .trata__grid{ grid-template-columns:1fr; gap:40px; }
+}
