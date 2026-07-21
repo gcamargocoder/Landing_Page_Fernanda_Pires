@@ -138,4 +138,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Modal de zoom para imagens informativas
+  const zoomImgs = document.querySelectorAll('.img--zoomable');
+  const imgModal = document.getElementById('imgModal');
+
+  if (zoomImgs.length && imgModal){
+    const imgModalImg = document.getElementById('imgModalImg');
+    const imgModalClose = document.getElementById('imgModalClose');
+
+    const openImgModal = (src, alt) => {
+      imgModalImg.src = src;
+      imgModalImg.alt = alt;
+      imgModal.classList.add('is-open');
+      imgModal.setAttribute('aria-hidden', 'false');
+    };
+
+    const closeImgModal = () => {
+      imgModal.classList.remove('is-open');
+      imgModal.setAttribute('aria-hidden', 'true');
+    };
+
+    zoomImgs.forEach(img => {
+      img.addEventListener('click', () => openImgModal(img.src, img.alt));
+    });
+
+    imgModalClose.addEventListener('click', closeImgModal);
+    imgModal.addEventListener('click', (e) => {
+      if (e.target === imgModal) closeImgModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeImgModal();
+    });
+  }
+
 });

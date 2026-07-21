@@ -70,7 +70,7 @@
           diversos países — inclusive no Brasil, onde a Fernanda atua.
         </p>
         <div class="historia__photo-wrap">
-          <img src="assets/img/historia-callahan-tft.png" alt="Ilustração da origem histórica da TFT" loading="lazy" decoding="async">
+          <img src="assets/img/historia-callahan-tft.png" alt="Ilustração da origem histórica da TFT" class="img--zoomable" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -91,7 +91,7 @@
           abordagens terapêuticas mais tradicionais.
         </p>
         <div class="historia__photo-wrap">
-          <img src="assets/img/pontos-estimulacao-tft.png" alt="Pontos de estimulação utilizados na TFT" loading="lazy" decoding="async">
+          <img src="assets/img/pontos-estimulacao-tft.png" alt="Pontos de estimulação utilizados na TFT" class="img--zoomable" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -192,8 +192,8 @@
   </section>
 
   <section class="section section--dark transformacao-real">
-    <div class="container transformacao-real__grid">
-      <div class="transformacao-real__col reveal">
+    <div class="container transformacao-real__stack">
+      <div class="transformacao-real__intro reveal">
         <span class="eyebrow eyebrow--light">A Transformação é Real</span>
         <h2 class="section__title section__title--light">Como as pessoas mudam de verdade</h2>
         <p class="transformacao-real__text">
@@ -213,8 +213,9 @@
 
       <div class="transformacao-real__media reveal reveal--delay">
         <div class="transformacao-real__photo-wrap">
-          <img src="assets/img/transformação-real-tft.png" alt="Sessão de TFT conduzida pela Fernanda Pires Camargo" loading="lazy" decoding="async">
+          <img src="assets/img/transformação-real-tft.png" alt="Sessão de TFT conduzida pela Fernanda Pires Camargo" class="img--zoomable" loading="lazy" decoding="async">
         </div>
+        <span class="transformacao-real__hint"><i data-lucide="zoom-in"></i> Toque na imagem para ampliar</span>
       </div>
     </div>
   </section>
@@ -334,6 +335,13 @@
 <a href="https://wa.me/5517991010309" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
   <i data-lucide="message-circle"></i>
 </a>
+
+<div class="img-modal" id="imgModal" aria-hidden="true">
+  <button class="img-modal__close" id="imgModalClose" aria-label="Fechar imagem ampliada">
+    <i data-lucide="x"></i>
+  </button>
+  <img src="" alt="" class="img-modal__img" id="imgModalImg">
+</div>
 
 <script src="https://unpkg.com/lucide@0.462.0"></script>
 <script src="js/main.js"></script>

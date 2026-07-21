@@ -1094,3 +1094,7 @@ h1,h2,h3,h4{
   background:var(--gold);
   color:var(--petrol);
 }
+
+/* ---------- Utilitários de seção escura (usados na página auxiliar) ---------- */
+.section--dark{ background:var(--petrol); }
+.section__title--light{ color:var(--off-white); }
