@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Palavra giratória no título do Hero
   const rotatorEl = document.getElementById('heroRotator');
   if (rotatorEl){
-    const words = ['ansiedade', 'pânico', 'medos', 'traumas', 'dores'];
+    const words = ['ansiedade', 'pânico', 'depressão', 'medos', 'traumas', 'dores'];
     let wordIndex = 0;
 
     setInterval(() => {
