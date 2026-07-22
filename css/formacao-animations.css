@@ -1,0 +1,16 @@
+/* =========================================================
+   animations.css — Reveals & micro-interações
+   ========================================================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .8s ease, transform .8s ease;
+}
+.reveal.in-view{
+  opacity:1;
+  transform:translateY(0);
+}
+.reveal--delay.in-view{ transition-delay:.15s; }
+.reveal--delay-2.in-view{ transition-delay:.3s; }
+.reveal--delay-3.in-view{ transition-delay:.45s; }
