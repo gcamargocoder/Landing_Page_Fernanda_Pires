@@ -46,6 +46,7 @@
   .hero__title{ font-size:1.6rem; }
   .btn{ padding:14px 24px; font-size:.9rem; }
   .section{ padding-block:80px; }
+  .hero__subtitle-line{ display:block; }
 }
 
 /* ---------- Para quem é / O que é TFT responsivo ---------- */
@@ -197,8 +198,7 @@
 
 /* ---------- Diferenciais responsivo ---------- */
 @media (max-width: 640px){
-  .diferenciais__row{ grid-template-columns:1fr; }
-  .diferenciais__row--head span:first-child{ display:none; }
+  .diferenciais-item{ grid-template-columns:1fr; gap:8px; }
 }
 
 /* ---------- CTA Final 2 colunas responsivo ---------- */
