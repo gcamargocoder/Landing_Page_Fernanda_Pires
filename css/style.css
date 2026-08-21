@@ -988,6 +988,26 @@ h1,h2,h3,h4{
   text-align:center;
 }
 
+.footer__credit{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:10px;
+}
+.footer__credit a{
+  display:inline-flex;
+  align-items:center;
+  line-height:0;
+}
+.footer__credit-logo{
+  height:20px;
+  width:auto;
+  opacity:.9;
+  transition:opacity .2s ease;
+}
+.footer__credit a:hover .footer__credit-logo{ opacity:1; }
+
 /* ---------- Botão flutuante do WhatsApp ---------- */
 .whatsapp-float{
   position:fixed;
