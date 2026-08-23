@@ -135,7 +135,7 @@ h1,h2,h3,h4{
   align-items:center;
 }
 .logo__img{
-  height:48px;
+  height:64px;
   width:auto;
   max-width:100%;
   object-fit:contain;
