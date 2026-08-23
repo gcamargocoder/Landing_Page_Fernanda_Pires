@@ -63,7 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fecha o menu ao clicar/tocar fora dele (fora do menu e do botão de abrir/fechar)
     document.addEventListener('click', (e) => {
       if (!nav.classList.contains('is-open')) return;
-      if (nav.contains(e.target) || navToggle.contains(e.target)) return;
+      // usa composedPath (caminho capturado no momento do clique) em vez de
+      // e.target, pois o próprio clique no botão troca o ícone (innerHTML),
+      // o que desconecta e.target do DOM antes deste handler rodar
+      const path = typeof e.composedPath === 'function' ? e.composedPath() : [e.target];
+      if (path.includes(nav) || path.includes(navToggle)) return;
       setNavOpen(false);
     });
 
