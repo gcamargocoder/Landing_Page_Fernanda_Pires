@@ -58,7 +58,8 @@
     gap:56px;
     text-align:center;
   }
-  .missao__media{ max-width:420px; margin-inline:auto; }
+  .missao__media{ max-width:420px; margin-inline:auto; order:2; }
+  .missao__content{ order:1; }
   .missao__badge{ right:50%; transform:translateX(50%); bottom:-24px; }
   .section__text{ margin-inline:auto; }
 }

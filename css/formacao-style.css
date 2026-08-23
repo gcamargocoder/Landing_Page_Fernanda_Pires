@@ -985,6 +985,12 @@ h1,h2,h3,h4{
   font-size:.9rem;
   color:var(--muted);
   text-decoration:line-through;
+  margin-bottom:2px;
+}
+.cta-final__price-bonus{
+  font-size:.9rem;
+  color:var(--gold-dark, var(--gold));
+  text-decoration:line-through;
   margin-bottom:6px;
 }
 .cta-final__price-label{
