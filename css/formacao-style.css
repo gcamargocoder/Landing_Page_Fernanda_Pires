@@ -994,16 +994,17 @@ h1,h2,h3,h4{
   align-items:center;
 }
 .cta-final__price-old{
-  font-size:.9rem;
+  font-size:1.05rem;
   color:var(--muted);
   text-decoration:line-through;
-  margin-bottom:2px;
+  margin-bottom:6px;
 }
 .cta-final__price-bonus{
-  font-size:.9rem;
+  font-size:1.2rem;
+  font-weight:600;
   color:var(--gold-dark, var(--gold));
   text-decoration:line-through;
-  margin-bottom:6px;
+  margin-bottom:2px;
 }
 .cta-final__price-label{
   font-size:.8rem;
