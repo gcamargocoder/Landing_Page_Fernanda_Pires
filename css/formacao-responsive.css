@@ -36,7 +36,7 @@
     align-items:flex-start;
     gap:26px;
   }
-  .nav__list a{ color:var(--off-white); }
+  .header .nav__list a{ color:var(--off-white); }
   .nav-toggle{ display:flex; }
 }
 
@@ -47,6 +47,13 @@
   .btn{ padding:14px 24px; font-size:.9rem; }
   .section{ padding-block:80px; }
   .hero__subtitle-line{ display:block; }
+}
+
+/* ---------- Cabeçalho apertado (pill "Atendimento Individual" vira ícone) ---------- */
+@media (max-width: 600px){
+  .header__inner{ gap:12px; }
+  .nav__atendimento{ padding:10px; gap:0; }
+  .nav__atendimento-text{ display:none; }
 }
 
 /* ---------- Para quem é / O que é TFT responsivo ---------- */
