@@ -21,7 +21,8 @@
   .nav{
     position:fixed;
     top:0; right:0;
-    width:min(320px, 80vw);
+    width:max-content;
+    max-width:80vw;
     height:100vh;
     background:var(--petrol);
     box-shadow:-10px 0 40px rgba(0,0,0,0.3);
