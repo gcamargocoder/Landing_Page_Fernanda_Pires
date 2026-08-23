@@ -43,22 +43,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.getElementById('navToggle');
 
   if (nav && navToggle){
-    navToggle.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('is-open');
+    const setNavOpen = (isOpen) => {
+      nav.classList.toggle('is-open', isOpen);
       navToggle.setAttribute('aria-expanded', isOpen);
       navToggle.innerHTML = isOpen
         ? '<i data-lucide="x"></i>'
         : '<i data-lucide="menu"></i>';
       if (window.lucide) lucide.createIcons();
+    };
+
+    navToggle.addEventListener('click', () => {
+      setNavOpen(!nav.classList.contains('is-open'));
     });
 
     nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', false);
-        navToggle.innerHTML = '<i data-lucide="menu"></i>';
-        if (window.lucide) lucide.createIcons();
-      });
+      link.addEventListener('click', () => setNavOpen(false));
+    });
+
+    // Fecha o menu ao clicar/tocar fora dele (fora do menu e do botão de abrir/fechar)
+    document.addEventListener('click', (e) => {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(e.target) || navToggle.contains(e.target)) return;
+      setNavOpen(false);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) setNavOpen(false);
     });
   }
 
